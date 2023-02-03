@@ -46,7 +46,7 @@ const login = async ()=>{
 return response.text();
 }
 
-app.get("/nlu", async(req,res)=>{
+app.get("/login", async(req,res)=>{
  const body = await login()
 
 res.send(JSON.parse(body))
