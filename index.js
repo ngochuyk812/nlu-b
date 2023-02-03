@@ -46,9 +46,9 @@ const login = async (user, pass)=>{
 return response.text();
 }
 
-app.post("/login/", async(req,res)=>{
+app.post("/login", async(req,res)=>{
  const body = await login(req.body.username, req.body.pass)
-  console.log(req.body.username, req.body.pass);
+  console.log(body);
 res.send(JSON.stringify(body))
 })
 app.get("/tkb/:token", async (req,res)=>{
