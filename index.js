@@ -51,12 +51,12 @@ app.post("/login", async(req,res)=>{
   console.log(body);
 res.send(JSON.stringify(body))
 })
-app.get("/tkb/:token", async (req,res)=>{
-  console.log(req.params.token);
+app.post("/tkb/", async (req,res)=>{
+  console.log(req.body.token);
 var headers = {
   'Accept': 'application/json, text/plain, */*',
   'Accept-Language': 'en-US,en;q=0.9,vi;q=0.8',
-  'Authorization': 'Bearer '+ req.params.token,
+  'Authorization': 'Bearer '+ req.body.token,
   'Connection': 'keep-alive',
   'Content-Type': 'application/json',
   'Cookie': 'ASP.NET_SessionId=qqa2epgjh2xrlvl2e5tnrbfd',
